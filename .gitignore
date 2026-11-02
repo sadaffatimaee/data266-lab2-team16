@@ -1,0 +1,23 @@
+# Data, PDFs and generated files never go to GitHub (weights/images -> Hugging Face)
+*.pdf
+data/
+outputs/
+chroma/
+objects/
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+submission.csv
+
+# Secrets
+.env
+*.key
+kaggle.json
+hf_token*
+
+# Python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
