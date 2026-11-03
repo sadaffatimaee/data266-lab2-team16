@@ -1,0 +1,21 @@
+pid,type,prompt
+P01,in_domain,a group of people in military uniforms and helmets
+P02,in_domain,a man with red hair and green eyes
+P03,in_domain,a woman with a sword in her hand
+P04,in_domain,a woman with a gun in her hand
+P05,in_domain,a man in a black and white outfit
+P06,in_domain,a man with long blonde hair and a black shirt
+P07,in_domain,a woman with long hair and a sword
+P08,in_domain,a man in a hoodie with a fire in the background
+P09,in_domain,a man with sunglasses and a hat on
+P10,in_domain,a man with a mohawk in his hair
+P11,out_of_domain,a red sports car parked on a city street at night
+P12,out_of_domain,a bowl of fruit on a wooden kitchen table
+P13,out_of_domain,a lighthouse on a rocky coast at sunset
+P14,out_of_domain,a golden retriever running on a beach
+P15,out_of_domain,a modern glass skyscraper under a blue sky
+P16,compositional,"two characters, one in red and one in blue"
+P17,compositional,a boy with yellow hair standing to the left of a girl with pink hair
+P18,compositional,"three ninjas in a row, the middle one wearing an orange jacket"
+P19,compositional,a man with white hair holding a red umbrella in the rain
+P20,compositional,a girl in a green dress next to a boy in a black hoodie
