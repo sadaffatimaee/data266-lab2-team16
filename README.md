@@ -43,7 +43,7 @@ CLIP score, LPIPS diversity, GPU-hours and a memorization check; and uploads eve
 - Metrics: CLIP `openai/clip-vit-base-patch16`, KID (torchmetrics, torch-fidelity Inception), LPIPS (AlexNet)
 
 **Hosted APIs used:** none (all models run locally on the Kaggle GPU).
-Pinned versions for Part 2: `requirements-p2.txt` (Part 1: `requirements.txt`).
+- `requirements.txt` (Part 1) and `requirements-p2.txt` (Part 2) – pinned versions · `CONTRIBUTIONS.md` · `AI_USAGE.md`
 
 ## Part 3
 To be added.
