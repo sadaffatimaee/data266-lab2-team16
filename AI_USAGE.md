@@ -1,8 +1,8 @@
+# AI usage
 
+**Tool:** Claude Code (Claude Opus 5.5)
 
-| Tool | Version | Used for | Parts |
-|---|---|---|---|
-| Claude Code (Anthropic) | Claude Opus 5.5 | Explaining the lab specification and rubric; step-by-step guidance; writing most of the Part 1 notebook code (PDF ingestion, figure/table cropping, VLM figure descriptions, ChromaDB indexing, dense/BM25/hybrid retrieval, reranker, cross-reference expansion, answer generation prompt and JSON cleaning, conversation memory, false-premise/conflict checks, submission loop); writing the Task 1.4 evaluation code; drafting the 25-question golden set; debugging Kaggle errors | Part 1 |
+ **Part 1:** wrote most of the code, drafted the golden set, helped debug.
+ **Part 2:** wrote most of the code, drafted 10 of the 20 prompts, built the rating sheet.
 
-
-
+I ran and checked everything, made the design choices, did all human ratings, and wrote the report.
