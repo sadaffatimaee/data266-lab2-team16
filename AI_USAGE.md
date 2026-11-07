@@ -7,3 +7,5 @@
  **Part 2:** wrote most of the code, drafted 10 of the 20 prompts, built the rating sheet.
 
 I ran and checked everything, made the design choices, did all human ratings, and wrote the report.
+
+- Part 3: drafted the 15 scenarios and 10 red-team cases; helped debug.  checked every result and did all human judging ourselves.
