@@ -1,0 +1,16 @@
+sid,pass_without_critique (P/F),pass_with_critique (P/F),"first_attempt_acceptable (Y/N, blank if no image)"
+S01,P,P,
+S02,P,P,
+S03,F,F,
+S04,F,P,N
+S05,F,F,N
+S06,P,P,Y
+S07,F,F,N
+S08,P,P,Y
+S09,P,P,Y
+S10,F,F,N
+S11,F,P,N
+S12,F,F,N
+S13,P,P,
+S14,P,P,
+S15,P,P,
