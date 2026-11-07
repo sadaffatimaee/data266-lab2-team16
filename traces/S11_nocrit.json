@@ -1,0 +1,122 @@
+{
+ "request": "Redraw this scene in Naruto anime style.",
+ "image_path": "/kaggle/working/inputs/coco_cats.jpg",
+ "rid": "S11",
+ "use_critique": false,
+ "image": null,
+ "route": "domain_style",
+ "planner_reason": "request names the Naruto/anime style (our Part 2 LoRA)",
+ "vision": {
+  "caption": "Two cats sleeping on a pink couch with remote controls nearby.",
+  "objects": [
+   "two cats",
+   "remote controls"
+  ],
+  "visible_text": "",
+  "qa": [
+   {
+    "q": "What is the main subject of the image?",
+    "a": "The main subjects are two cats sleeping on a pink couch."
+   },
+   {
+    "q": "What is the setting or background?",
+    "a": "The background includes a pink couch and some remote controls placed near the cats."
+   }
+  ]
+ },
+ "prompt": {
+  "prompt": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style., naruto anime style",
+  "negative_prompt": "blurry, distorted, low quality, text, watermark",
+  "target": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style."
+ },
+ "generation": {
+  "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+  "mode": "domain_style",
+  "strength": 0.7,
+  "prompt": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style., naruto anime style",
+  "negative_prompt": "blurry, distorted, low quality, text, watermark",
+  "seed": 266,
+  "steps": 30,
+  "nsfw": true,
+  "path": "/kaggle/working/outputs/S11_nocrit_try0.png"
+ },
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "The generated image was blocked by the safety filter.",
+ "final_image": "",
+ "total_seconds": 19.45,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Redraw this scene in Naruto anime style.",
+    "file": "coco_cats.jpg"
+   },
+   "output": {
+    "route": "domain_style",
+    "reason": "request names the Naruto/anime style (our Part 2 LoRA)",
+    "message": ""
+   },
+   "seconds": 0.01
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "question_count": 2
+   },
+   "output": {
+    "caption": "Two cats sleeping on a pink couch with remote controls nearby.",
+    "objects": [
+     "two cats",
+     "remote controls"
+    ],
+    "visible_text": "",
+    "qa": [
+     {
+      "q": "What is the main subject of the image?",
+      "a": "The main subjects are two cats sleeping on a pink couch."
+     },
+     {
+      "q": "What is the setting or background?",
+      "a": "The background includes a pink couch and some remote controls placed near the cats."
+     }
+    ]
+   },
+   "seconds": 9.49
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "route": "domain_style",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style., naruto anime style",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "target": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style."
+   },
+   "seconds": 4.24
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "domain_style",
+    "prompt": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style., naruto anime style",
+    "revision": 0
+   },
+   "output": {
+    "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+    "mode": "domain_style",
+    "strength": 0.7,
+    "prompt": "Two cats sleeping on a pink couch with remote controls nearby in a Naruto anime style., naruto anime style",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "seed": 266,
+    "steps": 30,
+    "nsfw": true,
+    "path": "/kaggle/working/outputs/S11_nocrit_try0.png"
+   },
+   "seconds": 5.72
+  }
+ ]
+}

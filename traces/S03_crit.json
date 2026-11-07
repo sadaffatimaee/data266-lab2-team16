@@ -1,0 +1,33 @@
+{
+ "request": "List the main objects in this room.",
+ "image_path": "/kaggle/working/inputs/coco_living_room.jpg",
+ "rid": "S03",
+ "use_critique": true,
+ "image": null,
+ "route": "ambiguous",
+ "planner_reason": "The request is too vague to act on.",
+ "vision": {},
+ "prompt": {},
+ "generation": {},
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "Your request is too vague for me to act on safely. Do you want a caption, a style change (e.g. 'watercolor'), a specific edit (e.g. 'make it snow'), or a Naruto-style version?",
+ "final_image": "",
+ "total_seconds": 1.8,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "List the main objects in this room.",
+    "file": "coco_living_room.jpg"
+   },
+   "output": {
+    "route": "ambiguous",
+    "reason": "The request is too vague to act on.",
+    "message": "Your request is too vague for me to act on safely. Do you want a caption, a style change (e.g. 'watercolor'), a specific edit (e.g. 'make it snow'), or a Naruto-style version?"
+   },
+   "seconds": 1.8
+  }
+ ]
+}

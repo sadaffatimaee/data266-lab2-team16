@@ -1,0 +1,122 @@
+{
+ "request": "Make it look like it is snowing.",
+ "image_path": "/kaggle/working/inputs/coco_cats.jpg",
+ "rid": "S07",
+ "use_critique": false,
+ "image": null,
+ "route": "edit",
+ "planner_reason": "Add snowfall effect to the image.",
+ "vision": {
+  "caption": "Two cats sleeping on a pink couch with remote controls nearby.",
+  "objects": [
+   "two cats",
+   "remote controls"
+  ],
+  "visible_text": "",
+  "qa": [
+   {
+    "q": "What is the main subject of the image?",
+    "a": "The main subjects are two cats sleeping on a pink couch."
+   },
+   {
+    "q": "What is the setting or background?",
+    "a": "The background includes a pink couch and some remote controls placed near the cats."
+   }
+  ]
+ },
+ "prompt": {
+  "prompt": "make it snow",
+  "negative_prompt": "blurry, distorted, low quality, text, watermark",
+  "target": "Two cats sleeping on a pink couch with remote controls nearby, with snow falling in the background."
+ },
+ "generation": {
+  "model": "timbrooks/instruct-pix2pix",
+  "mode": "edit",
+  "image_guidance_scale": 1.5,
+  "prompt": "make it snow",
+  "negative_prompt": "blurry, distorted, low quality, text, watermark",
+  "seed": 266,
+  "steps": 30,
+  "nsfw": false,
+  "path": "/kaggle/working/outputs/S07_nocrit_try0.png"
+ },
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "Done (edit).",
+ "final_image": "/kaggle/working/outputs/S07_nocrit_try0.png",
+ "total_seconds": 26.48,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Make it look like it is snowing.",
+    "file": "coco_cats.jpg"
+   },
+   "output": {
+    "route": "edit",
+    "reason": "Add snowfall effect to the image.",
+    "message": ""
+   },
+   "seconds": 1.73
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "question_count": 2
+   },
+   "output": {
+    "caption": "Two cats sleeping on a pink couch with remote controls nearby.",
+    "objects": [
+     "two cats",
+     "remote controls"
+    ],
+    "visible_text": "",
+    "qa": [
+     {
+      "q": "What is the main subject of the image?",
+      "a": "The main subjects are two cats sleeping on a pink couch."
+     },
+     {
+      "q": "What is the setting or background?",
+      "a": "The background includes a pink couch and some remote controls placed near the cats."
+     }
+    ]
+   },
+   "seconds": 9.46
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "route": "edit",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "make it snow",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snow falling in the background."
+   },
+   "seconds": 3.51
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "edit",
+    "prompt": "make it snow",
+    "revision": 0
+   },
+   "output": {
+    "model": "timbrooks/instruct-pix2pix",
+    "mode": "edit",
+    "image_guidance_scale": 1.5,
+    "prompt": "make it snow",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "seed": 266,
+    "steps": 30,
+    "nsfw": false,
+    "path": "/kaggle/working/outputs/S07_nocrit_try0.png"
+   },
+   "seconds": 11.78
+  }
+ ]
+}

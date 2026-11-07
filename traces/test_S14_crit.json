@@ -1,0 +1,33 @@
+{
+ "request": "Caption this image.",
+ "image_path": "/kaggle/working/inputs/broken_jpg.jpg",
+ "rid": "test_S14",
+ "use_critique": true,
+ "image": null,
+ "route": "error",
+ "planner_reason": "input check failed",
+ "vision": {},
+ "prompt": {},
+ "generation": {},
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "This file is not a valid image (it could not be decoded). Please upload a JPG or PNG image.",
+ "final_image": "",
+ "total_seconds": 0.0,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Caption this image.",
+    "file": "broken_jpg.jpg"
+   },
+   "output": {
+    "route": "error",
+    "reason": "input check failed",
+    "message": "This file is not a valid image (it could not be decoded). Please upload a JPG or PNG image."
+   },
+   "seconds": 0.0
+  }
+ ]
+}

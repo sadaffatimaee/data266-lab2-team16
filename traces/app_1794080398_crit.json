@@ -1,0 +1,247 @@
+{
+ "request": "Make it look like it is snowing",
+ "image_path": "/tmp/gradio/b04d19b0798aba11e65eba7a30f0993fb6bcc33eaa496eecfe2d3d18f2fa04cd/test_cats.jpg",
+ "rid": "app_1794080398",
+ "use_critique": true,
+ "image": null,
+ "route": "edit",
+ "planner_reason": "Add snowfall effect to the image",
+ "vision": {
+  "caption": "Two cats sleeping on a pink couch with remote controls nearby.",
+  "objects": [
+   "two cats",
+   "remote controls"
+  ],
+  "visible_text": "",
+  "qa": [
+   {
+    "q": "What is the main subject of the image?",
+    "a": "The main subjects are two cats sleeping on a pink couch."
+   },
+   {
+    "q": "What is the setting or background?",
+    "a": "The background includes a pink couch and some remote controls placed near the cats."
+   }
+  ]
+ },
+ "prompt": {
+  "prompt": "prompt",
+  "negative_prompt": "no snowflakes",
+  "target": "Two cats sleeping on a pink couch with remote controls nearby, with snowflakes falling in the background."
+ },
+ "generation": {
+  "model": "timbrooks/instruct-pix2pix",
+  "mode": "edit",
+  "image_guidance_scale": 1.5,
+  "prompt": "prompt",
+  "negative_prompt": "no snowflakes",
+  "seed": 268,
+  "steps": 30,
+  "nsfw": false,
+  "path": "/kaggle/working/outputs/app_1794080398_crit_try2.png"
+ },
+ "critique": {
+  "verdict": "revise",
+  "reason": "The image does not show any snowflakes or a snowy background. The request specifies that there should be snowflakes falling in the background, which is currently missing from the image.",
+  "revision_instruction": "Add snowflakes falling in the background to create a snowy effect.",
+  "clip_score": 30.78,
+  "vlm_verdict": "revise",
+  "safe": true
+ },
+ "critic_decisions": [
+  "revise",
+  "revise",
+  "revise"
+ ],
+ "revisions": 2,
+ "final_message": "Done (edit).",
+ "final_image": "/kaggle/working/outputs/app_1794080398_crit_try2.png",
+ "total_seconds": 74.82,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Make it look like it is snowing",
+    "file": "test_cats.jpg"
+   },
+   "output": {
+    "route": "edit",
+    "reason": "Add snowfall effect to the image",
+    "message": ""
+   },
+   "seconds": 1.66
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "question_count": 2
+   },
+   "output": {
+    "caption": "Two cats sleeping on a pink couch with remote controls nearby.",
+    "objects": [
+     "two cats",
+     "remote controls"
+    ],
+    "visible_text": "",
+    "qa": [
+     {
+      "q": "What is the main subject of the image?",
+      "a": "The main subjects are two cats sleeping on a pink couch."
+     },
+     {
+      "q": "What is the setting or background?",
+      "a": "The background includes a pink couch and some remote controls placed near the cats."
+     }
+    ]
+   },
+   "seconds": 9.42
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "route": "edit",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "make it snow",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snow falling in the background."
+   },
+   "seconds": 3.57
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "edit",
+    "prompt": "make it snow",
+    "revision": 0
+   },
+   "output": {
+    "model": "timbrooks/instruct-pix2pix",
+    "mode": "edit",
+    "image_guidance_scale": 1.5,
+    "prompt": "make it snow",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "seed": 266,
+    "steps": 30,
+    "nsfw": false,
+    "path": "/kaggle/working/outputs/app_1794080398_crit_try0.png"
+   },
+   "seconds": 12.84
+  },
+  {
+   "agent": "critique",
+   "input": {
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snow falling in the background.",
+    "revision": 0
+   },
+   "output": {
+    "verdict": "revise",
+    "reason": "The image does not show any snowfall in the background. The request specifies that there should be snow falling, which is currently missing from the image.",
+    "revision_instruction": "Add snowflakes falling in the background to match the requested scene.",
+    "clip_score": 31.66,
+    "vlm_verdict": "revise",
+    "safe": true
+   },
+   "seconds": 5.57
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "route": "edit",
+    "revision": 1
+   },
+   "output": {
+    "prompt": "make it snow",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snowflakes falling in the background."
+   },
+   "seconds": 3.2
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "edit",
+    "prompt": "make it snow",
+    "revision": 1
+   },
+   "output": {
+    "model": "timbrooks/instruct-pix2pix",
+    "mode": "edit",
+    "image_guidance_scale": 1.5,
+    "prompt": "make it snow",
+    "negative_prompt": "blurry, distorted, low quality, text, watermark",
+    "seed": 267,
+    "steps": 30,
+    "nsfw": false,
+    "path": "/kaggle/working/outputs/app_1794080398_crit_try1.png"
+   },
+   "seconds": 11.95
+  },
+  {
+   "agent": "critique",
+   "input": {
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snowflakes falling in the background.",
+    "revision": 1
+   },
+   "output": {
+    "verdict": "revise",
+    "reason": "The image does not show any snowflakes or a snowy background. The request specifies that there should be snowflakes falling in the background, which is currently missing from the image.",
+    "revision_instruction": "Add snowflakes falling in the background to create a snowy effect.",
+    "clip_score": 34.19,
+    "vlm_verdict": "revise",
+    "safe": true
+   },
+   "seconds": 5.8
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "route": "edit",
+    "revision": 2
+   },
+   "output": {
+    "prompt": "prompt",
+    "negative_prompt": "no snowflakes",
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snowflakes falling in the background."
+   },
+   "seconds": 3.38
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "edit",
+    "prompt": "prompt",
+    "revision": 2
+   },
+   "output": {
+    "model": "timbrooks/instruct-pix2pix",
+    "mode": "edit",
+    "image_guidance_scale": 1.5,
+    "prompt": "prompt",
+    "negative_prompt": "no snowflakes",
+    "seed": 268,
+    "steps": 30,
+    "nsfw": false,
+    "path": "/kaggle/working/outputs/app_1794080398_crit_try2.png"
+   },
+   "seconds": 11.43
+  },
+  {
+   "agent": "critique",
+   "input": {
+    "target": "Two cats sleeping on a pink couch with remote controls nearby, with snowflakes falling in the background.",
+    "revision": 2
+   },
+   "output": {
+    "verdict": "revise",
+    "reason": "The image does not show any snowflakes or a snowy background. The request specifies that there should be snowflakes falling in the background, which is currently missing from the image.",
+    "revision_instruction": "Add snowflakes falling in the background to create a snowy effect.",
+    "clip_score": 30.78,
+    "vlm_verdict": "revise",
+    "safe": true
+   },
+   "seconds": 6.0
+  }
+ ]
+}
