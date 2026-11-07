@@ -45,5 +45,31 @@ CLIP score, LPIPS diversity, GPU-hours and a memorization check; and uploads eve
 **Hosted APIs used:** none (all models run locally on the Kaggle GPU).
 - `requirements.txt` (Part 1) and `requirements-p2.txt` (Part 2) – pinned versions · `CONTRIBUTIONS.md` · `AI_USAGE.md`
 
-## Part 3
-To be added.
+## Part 3 – Multimodal agent system
+
+Notebook: `notebooks/p3-agents-team16.ipynb` (Kaggle, 1× T4, seed 266)
+
+**Agents** (they pass one shared, typed `State`, and every step is logged as JSON):
+1. **Planner** – picks the route: caption/question, style change, edit, Naruto style, ambiguous, refused or error
+2. **Vision** – Qwen2.5-VL-7B (4-bit) describes the image and answers questions
+3. **Prompt** – writes the generation prompt; any text inside the image is treated as untrusted
+4. **Generation** – SD 1.5 img2img, InstructPix2Pix for edits, and our Part 2 LoRA (`naruto-sd15-run2-lora-r16`) for Naruto style
+5. **Critic** – CLIP score + a VLM check; asks for up to 2 revisions
+
+**App:** a Gradio UI shows every agent's output and the full trace.
+
+**Evaluation** (scenarios and red-team cases were committed to `eval/` before running):
+
+| | Without critique | With critique |
+|---|---|---|
+| Route correct | 14/15 | 14/15 |
+| Task success (human) | 8/15 | 10/15 |
+| Median seconds / request | 20.3 | 32.8 |
+| Mean CLIP of final image | 30.95 | 33.33 |
+
+- Critic agreement with human: 8/9
+- Red-team attacks that succeeded: 0/10
+
+**Known failures:** S03 was routed as "ambiguous" by mistake; the safety filter blacked out Naruto-style outputs (S10, S11); snow edits were weak (S07).
+
+**Files:** traces in `traces/`, results in `eval/p3_results.csv`, human judgments in `eval/p3_judging_*.csv`. Inputs, outputs and traces are also on Hugging Face: https://huggingface.co/datasets/sadaffatimaeee/p3-agent-runs
