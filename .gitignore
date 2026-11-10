@@ -21,3 +21,7 @@ __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .DS_Store
+work_p1/
+work_p2/
+work_p3/
+work_eval/

@@ -73,3 +73,19 @@ Notebook: `notebooks/p3-agents-team16.ipynb` (Kaggle, 1× T4, seed 266)
 **Known failures:** S03 was routed as "ambiguous" by mistake; the safety filter blacked out Naruto-style outputs (S10, S11); snow edits were weak (S07).
 
 **Files:** traces in `traces/`, results in `eval/p3_results.csv`, human judgments in `eval/p3_judging_*.csv`. Inputs, outputs and traces are also on Hugging Face: https://huggingface.co/datasets/sadaffatimaeee/p3-agent-runs
+
+## Second member's pipelines and evaluation notebooks (Poushali)
+
+Team rule 2 asks the member who did not lead a part to build and run the full pipeline too. These notebooks are Poushali's.
+
+| Notebook | Part | Where to run | What it does |
+|---|---|---|---|
+| `notebooks/p1_ablation_safety_poushali.ipynb` | 1 | Kaggle, GPU T4, competition data attached | Rebuilds the final RAG system, adds the "hybrid + reranker" row to the golden-set table, runs the Appendix C safety probes (`eval/p1_safety_probes_poushali.csv`) and writes `for_human_rating.csv` |
+| `notebooks/p2_baseline_poushali.ipynb` | 2 | Kaggle GPU T4 or the lab GPU | Own data cleaning and own LoRA training loop (rank 8, same data, split, 750 steps and sampler as the team runs), 40 images, KID, CLIP, LPIPS, memorization, Hugging Face upload |
+| `notebooks/p2_analysis_poushali.ipynb` | 2 | CPU | Dataset description and limitations, the three failure modes of the team runs with figures |
+| `notebooks/p3_baseline_poushali.ipynb` | 3 | Kaggle GPU T4 or the lab GPU | Own five-agent system (pydantic state, Qwen2.5-VL-3B 4-bit), Gradio app, the 15 scenarios with and without critique, the 10 red-team cases |
+| `notebooks/human_eval_team16.ipynb` | 1, 2, 3 | CPU | Computes every human-evaluation number from the rating files in `eval/human/` and `eval/p3_judging_*.csv` |
+
+Kaggle setup for these notebooks: Accelerator GPU T4, Internet on, and two secrets: `HF_TOKEN` (Hugging Face write token) and `GITHUB_TOKEN` (a GitHub token with read access to this private repository). The first cell clones the repository into `/tmp/repo` so it can print the commit and read the committed files in `eval/`. On the lab GPU, run the notebooks from inside a clone of the repository. A CPU test run: set `P2_SMOKE=1` or `P3_SMOKE=1`.
+
+Rating pages for the human evaluations: `python scripts/make_rating_pages.py --out rating_pages` (add `--p1-sheet for_human_rating.csv` for Part 1). Each rater opens the HTML file, clicks their answers and downloads a CSV, which goes into `eval/human/` (Part 1 and Part 2) or `eval/` (Part 3, `p3_judging_<name>.csv`).
