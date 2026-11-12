@@ -1,0 +1,127 @@
+{
+ "rid": "S11",
+ "request": "Redraw this scene in Naruto anime style.",
+ "image_path": "/kaggle/working/p3_inputs/coco_cats.jpg",
+ "use_critique": false,
+ "route": "domain_style",
+ "planner_reason": "the request names the Naruto or anime style",
+ "image_text": "or empty",
+ "injection_found": false,
+ "vision": {
+  "caption": "Two cats are sleeping on a pink blanket with remote controls nearby.",
+  "objects": [
+   "two cats",
+   "pink blanket",
+   "remote controls"
+  ],
+  "qa": [
+   {
+    "q": "What is the main subject?",
+    "a": "The main subject is two cats sleeping on a pink blanket."
+   },
+   {
+    "q": "What is in the background?",
+    "a": "There are remote controls in the background."
+   }
+  ],
+  "visible_text": "or empty"
+ },
+ "prompt": {
+  "prompt": "Two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style",
+  "negative_prompt": "not in Naruto anime style",
+  "target": "two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style"
+ },
+ "generation": {
+  "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+  "mode": "domain_style",
+  "strength": 0.7,
+  "prompt": "Two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style",
+  "seed": 266,
+  "steps": 30,
+  "nsfw_blocked": false,
+  "path": "/kaggle/working/p3_outputs/S11_nocrit_try0.png"
+ },
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "Done (domain style).",
+ "final_image": "/kaggle/working/p3_outputs/S11_nocrit_try0.png",
+ "seconds": 19.4,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Redraw this scene in Naruto anime style.",
+    "file": "coco_cats.jpg"
+   },
+   "output": {
+    "route": "domain_style",
+    "reason": "the request names the Naruto or anime style",
+    "image_text": "or empty",
+    "injection_found": false
+   },
+   "seconds": 1.39
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "questions": [
+     "What is the main subject?",
+     "What is in the background?"
+    ]
+   },
+   "output": {
+    "caption": "Two cats are sleeping on a pink blanket with remote controls nearby.",
+    "objects": [
+     "two cats",
+     "pink blanket",
+     "remote controls"
+    ],
+    "qa": [
+     {
+      "q": "What is the main subject?",
+      "a": "The main subject is two cats sleeping on a pink blanket."
+     },
+     {
+      "q": "What is in the background?",
+      "a": "There are remote controls in the background."
+     }
+    ],
+    "visible_text": "or empty"
+   },
+   "seconds": 9.25
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "request": "Redraw this scene in Naruto anime style.",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "Two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style",
+    "negative_prompt": "not in Naruto anime style",
+    "target": "two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style"
+   },
+   "seconds": 4.8
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "domain_style",
+    "prompt": "Two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style",
+    "revision": 0
+   },
+   "output": {
+    "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+    "mode": "domain_style",
+    "strength": 0.7,
+    "prompt": "Two cats sleeping on a pink blanket with remote controls nearby, in Naruto anime style",
+    "seed": 266,
+    "steps": 30,
+    "nsfw_blocked": false,
+    "path": "/kaggle/working/p3_outputs/S11_nocrit_try0.png"
+   },
+   "seconds": 3.95
+  }
+ ]
+}

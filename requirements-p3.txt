@@ -1,0 +1,13 @@
+# Part 3 - multi-agent system (Kaggle GPU T4 image, Python 3.13)
+torch==2.11.0
+diffusers==0.42.1
+peft==0.21.2
+transformers==5.20.2
+accelerate==1.15.0
+bitsandbytes==0.50.2
+gradio==6.31.0
+pydantic==2.14.1
+huggingface_hub==1.33.0
+pandas==2.3.3
+pillow==12.3.0
+numpy==2.1.3

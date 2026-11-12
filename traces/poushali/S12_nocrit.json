@@ -1,0 +1,123 @@
+{
+ "rid": "S12",
+ "request": "Make a Naruto-style version of this character standing on a rooftop at night.",
+ "image_path": "/kaggle/working/p3_inputs/naruto_test_2.png",
+ "use_critique": false,
+ "route": "domain_style",
+ "planner_reason": "the request names the Naruto or anime style",
+ "image_text": "or empty",
+ "injection_found": false,
+ "vision": {
+  "caption": "Three animated characters standing together.",
+  "objects": [
+   "three animated characters"
+  ],
+  "qa": [
+   {
+    "q": "What is the main subject?",
+    "a": "The main subject is three animated characters."
+   },
+   {
+    "q": "What is in the background?",
+    "a": "There is no specific object mentioned in the background."
+   }
+  ],
+  "visible_text": "or empty"
+ },
+ "prompt": {
+  "prompt": "three animated characters standing together, one in a Naruto-style outfit standing on a rooftop at night",
+  "negative_prompt": "not a Naruto-style outfit, not standing on a rooftop, not at night",
+  "target": "three animated characters in a Naruto-style outfit standing together on a rooftop at night"
+ },
+ "generation": {
+  "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+  "mode": "domain_style",
+  "strength": 0.7,
+  "prompt": "three animated characters standing together, one in a Naruto-style outfit standing on a rooftop at night",
+  "seed": 266,
+  "steps": 30,
+  "nsfw_blocked": false,
+  "path": "/kaggle/working/p3_outputs/S12_nocrit_try0.png"
+ },
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "Done (domain style).",
+ "final_image": "/kaggle/working/p3_outputs/S12_nocrit_try0.png",
+ "seconds": 19.23,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Make a Naruto-style version of this character standing on a rooftop at night.",
+    "file": "naruto_test_2.png"
+   },
+   "output": {
+    "route": "domain_style",
+    "reason": "the request names the Naruto or anime style",
+    "image_text": "or empty",
+    "injection_found": false
+   },
+   "seconds": 1.27
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "questions": [
+     "What is the main subject?",
+     "What is in the background?"
+    ]
+   },
+   "output": {
+    "caption": "Three animated characters standing together.",
+    "objects": [
+     "three animated characters"
+    ],
+    "qa": [
+     {
+      "q": "What is the main subject?",
+      "a": "The main subject is three animated characters."
+     },
+     {
+      "q": "What is in the background?",
+      "a": "There is no specific object mentioned in the background."
+     }
+    ],
+    "visible_text": "or empty"
+   },
+   "seconds": 8.04
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "request": "Make a Naruto-style version of this character standing on a rooftop at night.",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "three animated characters standing together, one in a Naruto-style outfit standing on a rooftop at night",
+    "negative_prompt": "not a Naruto-style outfit, not standing on a rooftop, not at night",
+    "target": "three animated characters in a Naruto-style outfit standing together on a rooftop at night"
+   },
+   "seconds": 5.94
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "domain_style",
+    "prompt": "three animated characters standing together, one in a Naruto-style outfit standing on a rooftop at night",
+    "revision": 0
+   },
+   "output": {
+    "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+    "mode": "domain_style",
+    "strength": 0.7,
+    "prompt": "three animated characters standing together, one in a Naruto-style outfit standing on a rooftop at night",
+    "seed": 266,
+    "steps": 30,
+    "nsfw_blocked": false,
+    "path": "/kaggle/working/p3_outputs/S12_nocrit_try0.png"
+   },
+   "seconds": 3.97
+  }
+ ]
+}

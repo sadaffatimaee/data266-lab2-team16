@@ -8,9 +8,12 @@ Hugging Face
   Part 2 model run 2 (LoRA r16, final): https://huggingface.co/sadaffatimaeee/naruto-sd15-run2-lora-r16
   Part 2 generated images: https://huggingface.co/datasets/sadaffatimaeee/naruto-lora-generations
   Part 3 inputs, outputs, traces: https://huggingface.co/datasets/sadaffatimaeee/p3-agent-runs
+  Part 2 baseline pipeline model (Poushali, LoRA r8): https://huggingface.co/Poushali0220/naruto-sd15-poushali-lora-r8
+  Part 2 baseline pipeline images (Poushali): https://huggingface.co/datasets/Poushali0220/naruto-poushali-generations
 
 Kaggle
   Part 1 final notebook: https://www.kaggle.com/code/sadaffatimasyeda/part1-rag-lab-pair-16
   Part 1 eval notebook: https://www.kaggle.com/code/sadaffatimasyeda/p1-eval-team16
   Part 2 notebook: https://www.kaggle.com/code/sadaffatimasyeda/notebook53a1a8beaa
   Part 3 notebook: https://www.kaggle.com/code/sadaffatimasyeda/p3-agents-team16 (executed copy with outputs: notebooks/p3-agents-team16.ipynb on GitHub)
+  Poushali's runs (Kaggle T4, executed copies with outputs on GitHub): notebooks/p1_ablation_safety_poushali.ipynb, notebooks/p2_baseline_poushali.ipynb, notebooks/p3_baseline_poushali.ipynb

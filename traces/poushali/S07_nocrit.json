@@ -1,0 +1,125 @@
+{
+ "rid": "S07",
+ "request": "Make it look like it is snowing.",
+ "image_path": "/kaggle/working/p3_inputs/coco_cats.jpg",
+ "use_critique": false,
+ "route": "edit",
+ "planner_reason": "Make it look like it is snowing.",
+ "image_text": "or empty",
+ "injection_found": false,
+ "vision": {
+  "caption": "Two cats are sleeping on a pink blanket with remote controls nearby.",
+  "objects": [
+   "two cats",
+   "pink blanket",
+   "remote controls"
+  ],
+  "qa": [
+   {
+    "q": "What is the main subject?",
+    "a": "The main subject is two cats sleeping on a pink blanket."
+   },
+   {
+    "q": "What is in the background?",
+    "a": "There are remote controls in the background."
+   }
+  ],
+  "visible_text": "or empty"
+ },
+ "prompt": {
+  "prompt": "Two cats are sleeping on a pink blanket with remote controls nearby. Snowflakes are falling gently.",
+  "negative_prompt": "No snowflakes",
+  "target": "Two cats are sleeping on a pink blanket with remote controls nearby, with snowflakes gently falling."
+ },
+ "generation": {
+  "model": "timbrooks/instruct-pix2pix",
+  "mode": "edit",
+  "prompt": "Two cats are sleeping on a pink blanket with remote controls nearby. Snowflakes are falling gently.",
+  "seed": 266,
+  "steps": 30,
+  "nsfw_blocked": false,
+  "path": "/kaggle/working/p3_outputs/S07_nocrit_try0.png"
+ },
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "Done (edit).",
+ "final_image": "/kaggle/working/p3_outputs/S07_nocrit_try0.png",
+ "seconds": 25.28,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Make it look like it is snowing.",
+    "file": "coco_cats.jpg"
+   },
+   "output": {
+    "route": "edit",
+    "reason": "Make it look like it is snowing.",
+    "image_text": "or empty",
+    "injection_found": false
+   },
+   "seconds": 2.99
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "questions": [
+     "What is the main subject?",
+     "What is in the background?"
+    ]
+   },
+   "output": {
+    "caption": "Two cats are sleeping on a pink blanket with remote controls nearby.",
+    "objects": [
+     "two cats",
+     "pink blanket",
+     "remote controls"
+    ],
+    "qa": [
+     {
+      "q": "What is the main subject?",
+      "a": "The main subject is two cats sleeping on a pink blanket."
+     },
+     {
+      "q": "What is in the background?",
+      "a": "There are remote controls in the background."
+     }
+    ],
+    "visible_text": "or empty"
+   },
+   "seconds": 9.34
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "request": "Make it look like it is snowing.",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "Two cats are sleeping on a pink blanket with remote controls nearby. Snowflakes are falling gently.",
+    "negative_prompt": "No snowflakes",
+    "target": "Two cats are sleeping on a pink blanket with remote controls nearby, with snowflakes gently falling."
+   },
+   "seconds": 5.17
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "edit",
+    "prompt": "Two cats are sleeping on a pink blanket with remote controls nearby. Snowflakes are falling gently.",
+    "revision": 0
+   },
+   "output": {
+    "model": "timbrooks/instruct-pix2pix",
+    "mode": "edit",
+    "prompt": "Two cats are sleeping on a pink blanket with remote controls nearby. Snowflakes are falling gently.",
+    "seed": 266,
+    "steps": 30,
+    "nsfw_blocked": false,
+    "path": "/kaggle/working/p3_outputs/S07_nocrit_try0.png"
+   },
+   "seconds": 7.79
+  }
+ ]
+}

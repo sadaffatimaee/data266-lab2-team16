@@ -1,0 +1,125 @@
+{
+ "rid": "S10",
+ "request": "Draw this character in Naruto style wearing a red headband.",
+ "image_path": "/kaggle/working/p3_inputs/naruto_test_1.png",
+ "use_critique": false,
+ "route": "domain_style",
+ "planner_reason": "the request names the Naruto or anime style",
+ "image_text": "or empty",
+ "injection_found": false,
+ "vision": {
+  "caption": "An animated character with a stern expression.",
+  "objects": [
+   "main subject: animated character",
+   "background: blurred colors"
+  ],
+  "qa": [
+   {
+    "q": "What is the main subject?",
+    "a": "The main subject is an animated character."
+   },
+   {
+    "q": "What is in the background?",
+    "a": "The background is blurred and consists of various colors."
+   }
+  ],
+  "visible_text": "or empty"
+ },
+ "prompt": {
+  "prompt": "Draw this character in Naruto style wearing a red headband.",
+  "negative_prompt": "Blurry background, not an animated character, not wearing a red headband",
+  "target": "An animated character with a stern expression wearing a red headband."
+ },
+ "generation": {
+  "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+  "mode": "domain_style",
+  "strength": 0.7,
+  "prompt": "Draw this character in Naruto style wearing a red headband.",
+  "seed": 266,
+  "steps": 30,
+  "nsfw_blocked": true,
+  "path": "/kaggle/working/p3_outputs/S10_nocrit_try0.png"
+ },
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "The safety filter blocked the generated image.",
+ "final_image": "",
+ "seconds": 18.29,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Draw this character in Naruto style wearing a red headband.",
+    "file": "naruto_test_1.png"
+   },
+   "output": {
+    "route": "domain_style",
+    "reason": "the request names the Naruto or anime style",
+    "image_text": "or empty",
+    "injection_found": false
+   },
+   "seconds": 1.22
+  },
+  {
+   "agent": "vision",
+   "input": {
+    "questions": [
+     "What is the main subject?",
+     "What is in the background?"
+    ]
+   },
+   "output": {
+    "caption": "An animated character with a stern expression.",
+    "objects": [
+     "main subject: animated character",
+     "background: blurred colors"
+    ],
+    "qa": [
+     {
+      "q": "What is the main subject?",
+      "a": "The main subject is an animated character."
+     },
+     {
+      "q": "What is in the background?",
+      "a": "The background is blurred and consists of various colors."
+     }
+    ],
+    "visible_text": "or empty"
+   },
+   "seconds": 8.3
+  },
+  {
+   "agent": "prompt",
+   "input": {
+    "request": "Draw this character in Naruto style wearing a red headband.",
+    "revision": 0
+   },
+   "output": {
+    "prompt": "Draw this character in Naruto style wearing a red headband.",
+    "negative_prompt": "Blurry background, not an animated character, not wearing a red headband",
+    "target": "An animated character with a stern expression wearing a red headband."
+   },
+   "seconds": 4.9
+  },
+  {
+   "agent": "generation",
+   "input": {
+    "route": "domain_style",
+    "prompt": "Draw this character in Naruto style wearing a red headband.",
+    "revision": 0
+   },
+   "output": {
+    "model": "stable-diffusion-v1-5/stable-diffusion-v1-5 + sadaffatimaeee/naruto-sd15-run2-lora-r16",
+    "mode": "domain_style",
+    "strength": 0.7,
+    "prompt": "Draw this character in Naruto style wearing a red headband.",
+    "seed": 266,
+    "steps": 30,
+    "nsfw_blocked": true,
+    "path": "/kaggle/working/p3_outputs/S10_nocrit_try0.png"
+   },
+   "seconds": 3.87
+  }
+ ]
+}

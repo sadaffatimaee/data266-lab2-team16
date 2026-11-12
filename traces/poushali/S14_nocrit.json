@@ -1,0 +1,35 @@
+{
+ "rid": "S14",
+ "request": "Caption this image.",
+ "image_path": "/kaggle/working/p3_inputs/broken_jpg.jpg",
+ "use_critique": false,
+ "route": "error",
+ "planner_reason": "input check failed",
+ "image_text": "",
+ "injection_found": false,
+ "vision": {},
+ "prompt": {},
+ "generation": {},
+ "critique": {},
+ "critic_decisions": [],
+ "revisions": 0,
+ "final_message": "This file could not be read as an image. Please upload a JPG or PNG image.",
+ "final_image": "",
+ "seconds": 0.0,
+ "trace": [
+  {
+   "agent": "planner",
+   "input": {
+    "request": "Caption this image.",
+    "file": "broken_jpg.jpg"
+   },
+   "output": {
+    "route": "error",
+    "reason": "input check failed",
+    "image_text": "",
+    "injection_found": false
+   },
+   "seconds": 0.0
+  }
+ ]
+}

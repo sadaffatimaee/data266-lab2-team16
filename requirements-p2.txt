@@ -11,5 +11,5 @@ safetensors==0.8.0
 torchmetrics==1.9.0
 torch-fidelity==0.4.0
 lpips==0.1.4
-pandas
-pillow
+pandas==2.3.3
+pillow==13.0.0
