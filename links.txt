@@ -1,7 +1,7 @@
 GitHub repo: https://github.com/sadaffatimaee/data266-lab2-team16
-  p1-v1.0 commit: b755f2e
-  p2-v1.0 commit: b755f2e
-  p3-v1.0 commit: b755f2e
+  p1-v1.0 commit: a25cad1
+  p2-v1.0 commit: a25cad1
+  p3-v1.0 commit: a25cad1
 
 Hugging Face
   Part 2 model run 1 (LoRA r4): https://huggingface.co/sadaffatimaeee/naruto-sd15-run1-lora-r4
