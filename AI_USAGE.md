@@ -12,10 +12,4 @@ Sadaf ran and checked everything in her notebooks, made the design choices and d
 ## Poushali Deb Purkayastha
 **Tool:** Claude Code (Claude Opus 5.5)
 
-- Part 1: wrote the code of `p1_ablation_safety_poushali.ipynb` (reranker ablation, Appendix C probe runner) and drafted the 8 safety probe questions.
-- Part 2: wrote most of the code of `p2_baseline_poushali.ipynb` and `p2_analysis_poushali.ipynb`, and helped pick the failure-mode examples.
-- Part 3: wrote most of the code of `p3_baseline_poushali.ipynb`.
-- Evaluation: wrote `scripts/make_rating_pages.py` and `human_eval_team16.ipynb`.
-- Report: helped draft the report text and the architecture diagrams.
-
-Poushali ran the notebooks, checked every result, and did all of her own human ratings and judging without AI help. No AI tool rated or judged any output.
+Poushali designed and directed her pipelines, and used Claude Code to help write and debug the code of `p1_ablation_safety_poushali.ipynb`, `p2_baseline_poushali.ipynb`, `p2_analysis_poushali.ipynb`, `p3_baseline_poushali.ipynb`, `scripts/make_rating_pages.py` and `human_eval_team16.ipynb`, to help draft the 8 safety probe questions and pick the failure-mode examples, and to help draft the report text and diagrams. She ran every notebook on Kaggle, checked every result, and did all of her own human ratings and judging. No AI tool rated or judged any output.
