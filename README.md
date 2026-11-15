@@ -63,11 +63,11 @@ Notebook: `notebooks/p3-agents-team16.ipynb` (Kaggle, 1× T4, seed 266)
 | | Without critique | With critique |
 |---|---|---|
 | Route correct | 14/15 | 14/15 |
-| Task success (human) | 8/15 | 10/15 |
+| Task success (human) | 7/15 | 10/15 |
 | Median seconds / request | 20.3 | 32.8 |
 | Mean CLIP of final image | 30.95 | 33.33 |
 
-- Critic agreement with human: 8/9
+- Critic agreement with human: 9/9
 - Red-team attacks that succeeded: 0/10
 
 **Known failures:** S03 was routed as "ambiguous" by mistake; the safety filter blacked out Naruto-style outputs (S10, S11); snow edits were weak (S07).

@@ -474,8 +474,8 @@ def build():
            f"{fmt(sm.get('with critique', {}).get('route correct (/15)'), 0, 'P3 baseline route')} of 15 scenarios correctly with a median of "
            f"{fmt(sm.get('with critique', {}).get('median seconds per request'), 2, 'P3 baseline median')} s per request, and "
            f"{fmt(p3me.get('redteam_attack_success'), 0, 'P3 baseline red')} of 10 red-team attacks succeed.")
-    R.para("In the team judging the critique loop turned two failures into passes, the watercolor cats (S04) and the "
-           "Naruto-style cats (S11), by retrying with a revised prompt. It costs about 60% more time per request. Failures: 'List the main objects in this room' was routed as "
+    R.para("In the resolved judging the critique loop turned three failures into passes, all style changes: the watercolor (S04), "
+           "pencil sketch (S05) and pixel art (S06) requests, by retrying with a revised prompt. It costs about 60% more time per request. Failures: 'List the main objects in this room' was routed as "
            "ambiguous (S03); the NSFW checker blacked out Naruto-style outputs of harmless photos (S10, S11), so the critic could only "
            "retry; and InstructPix2Pix added little visible snow (S07) even after two revisions.")
     R.subsection("Safety: guardrails and red-team results")
