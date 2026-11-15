@@ -16,6 +16,7 @@ Sadaf ran and checked everything in her notebooks, made the design choices and d
 - Part 2: wrote most of the code of `p2_baseline_poushali.ipynb` and `p2_analysis_poushali.ipynb`, and helped pick the failure-mode examples.
 - Part 3: wrote most of the code of `p3_baseline_poushali.ipynb`.
 - Evaluation: wrote `scripts/make_rating_pages.py` and `human_eval_team16.ipynb`.
+- Evaluation pages: built the click-to-rate web page Poushali used to enter her own ratings, and the page shown on the recorded Part 3 call to note the agreed decisions.
 - Report: helped draft the report text and the architecture diagrams.
 
 Poushali ran the notebooks, checked every result, and did all of her own human ratings and judging without AI help. No AI tool rated or judged any output.
