@@ -37,4 +37,4 @@
 ## Meeting recordings
 | Date | Topic | Link |
 |---|---|---|
-| | | |
+| 2026-11-14 | Part 3 design discussion (team system vs baseline, critique loop trade-offs, safety) and resolution of the judging disagreements (audio) | https://drive.google.com/file/d/1dL4AEj59rs5u8KpYuzXOuq-Me5AMsfXe/view?usp=sharing |
